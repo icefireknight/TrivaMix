@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="js/main.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="js/app.js"></script>
     <title>Document</title>
-</head>
-<body>
-    <h1>TrivaMix</h1>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1 id="title">TrivaMix</h1>
     <h1 id="score"></h1>
-    <!-- <h1 id="time"></h1> -->
-    <input id="name" placeholder="Song Name">
-        <input id="artist" placeholder="Song Artist">
-        <button onclick="checkGuess(songs, score)" id="guessBtn">Check Answer</button>
-    <div id="music">
-        <!-- <iframe style="border-radius:75px" src="https://open.spotify.com/embed/track/6ATqL4f1nFWwASrWi8nF6e?utm_source=generator" width="4%" height="80" frameBorder="0" allowfullscreen="" autoplay="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> -->
-        
-        
-        <h1 id="song"></h1>
-    </div>
-    <!-- <button type="button" id="newSong" onclick="playSong()">New Song</button> -->
-    <!-- <input class="btn btn-primary btn-lg" type="button" onclick="requestAuthorization()" value="Request Authorization"> -->
-</body>
+    <input id="name" placeholder="Song Name" />
+    <input id="artist" placeholder="Song Artist" />
+    <button onclick="checkGuess(songs, score)" id="guessBtn">
+      Check Answer
+    </button>
+    <div id="music"></div>
+  </body>
 </html>

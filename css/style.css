@@ -1,0 +1,59 @@
+html {
+  background: rgb(84, 19, 136);
+  background: linear-gradient(
+    90deg,
+    rgba(84, 19, 136, 1) 0%,
+    rgba(114, 112, 114, 1) 51%,
+    rgba(107, 15, 26, 1) 100%
+  );
+}
+body {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+  justify-items: center;
+  align-items: start;
+}
+#music {
+  color: black;
+  background-color: black;
+  border-radius: 50%;
+  height: 600px;
+  width: 600px;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+  align-items: center;
+  justify-items: center;
+  grid-column-start: 3;
+  grid-row-start: 2;
+}
+#song {
+  grid-column-start: 3;
+  grid-row-start: 3;
+}
+h1 {
+  color: #f4f7f5;
+}
+#name {
+  grid-column-start: 1;
+  grid-row-start: 4;
+  height: 25%;
+}
+#artist {
+  grid-column-start: 2;
+  grid-row-start: 4;
+  height: 25%;
+}
+#guessBtn {
+  grid-column-start: 1;
+  grid-row-start: 5;
+}
+#score {
+  grid-column-start: 5;
+  grid-row-start: 1;
+}
+#title {
+  grid-column-start: 3;
+  grid-row-start: 1;
+}
