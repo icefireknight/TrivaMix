@@ -23,3 +23,4 @@ Play the game [here](https://icefireknight.github.io/TrivaMix/)
 - Add different time options
 - Show the timer
 - Redesign the look of the game.
+- Design the game to work on other screen resolutions
