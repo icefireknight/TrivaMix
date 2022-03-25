@@ -45,18 +45,50 @@ let choiceArtist = songChoice.artist;
 let score = 0;
 document.getElementById('score').innerText = `Score:${score}`;
 
-document.getElementById('music').innerHTML += `<iframe id="song" style="border-radius:75px" src="https://open.spotify.com/embed/track/${choiceID}?utm_source=generator" width="4%" height="80" frameBorder="0" allowfullscreen="" autoplay="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`;
-// while(true){
-// let songGuess = document.getElementById('name').value;
-// let artistGuess = document.getElementById('artist').value;
+document.getElementById('music').innerHTML = `<iframe id="song" style="border-radius:75px" src="https://open.spotify.com/embed/track/${choiceID}?utm_source=generator" width="4%" height="80" frameBorder="0" allowfullscreen="" autoplay="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`;
 
 
-// if (songGuess == choiceName && artistGuess == choiceArtist){
-//     console.log('correct');
-//     score = score + 1;
-//     songs.shift;
+function checkGuess(array){
+let songGuess = document.getElementById('name').value;
+let artistGuess = document.getElementById('artist').value;
+choiceName = songs[0].name;
+choiceArtist = songs[0].artist;
+
+console.log(array, score);
+if (songGuess.toLowerCase() === choiceName.toLowerCase() && artistGuess.toLowerCase() === choiceArtist.toLowerCase()){
+    console.log('correct');
+    score = score + 1;
+    document.getElementById('score').innerText = `Score:${score}`;
+    array.shift();
+    let songChoice = songs[0];
+    console.log(songChoice);
+    let choiceID = songChoice.songID;
+    
+    document.getElementById('music').innerHTML = `<iframe id="song" style="border-radius:75px" src="https://open.spotify.com/embed/track/${choiceID}?utm_source=generator" width="4%" height="80" frameBorder="0" allowfullscreen="" autoplay="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>`;
+    
+    
+}
+
+return score;
+}
+
+// function updateTime(){
+//     timeValue = timeValue - 1;
+//     document.getElementById('time').innerText = `Time Left:${timeValue}`;
+//     console.log('check');
 // }
-// }
+
+function stopTime(){
+    // clearInterval(myInterval);
+    document.getElementById('music').remove();
+    document.getElementById('name').remove();
+    document.getElementById('artist').remove();
+    document.getElementById('guessBtn').remove();
+    console.log('adios')
+}
+
+
+    const stopGame = setTimeout(stopTime, 60000);
 
 
 // function getRandomInt(max) {
@@ -74,7 +106,7 @@ document.getElementById('music').innerHTML += `<iframe id="song" style="border-r
 
 // }
 
-    currentSong = document.getElementById('song');
+    //currentSong = document.getElementById('song');
     // let songGuess = document.getElementById('name').value;
     // let artistGuess = document.getElementById('artist').value;
     // if (songGuess.length>0 && artistGuess.length>0 && songGuess.toLowerCase() === songName && artistGuess.toLowerCase() === artistName){

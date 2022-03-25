@@ -11,12 +11,14 @@
 <body>
     <h1>TrivaMix</h1>
     <h1 id="score"></h1>
+    <!-- <h1 id="time"></h1> -->
+    <input id="name" placeholder="Song Name">
+        <input id="artist" placeholder="Song Artist">
+        <button onclick="checkGuess(songs, score)" id="guessBtn">Check Answer</button>
     <div id="music">
         <!-- <iframe style="border-radius:75px" src="https://open.spotify.com/embed/track/6ATqL4f1nFWwASrWi8nF6e?utm_source=generator" width="4%" height="80" frameBorder="0" allowfullscreen="" autoplay="true" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> -->
         
-        <input id="name" placeholder="Song Name" required>
-        <input id="artist" placeholder="Song Artist" required>
-        <button onclick="checkGuess()" id="guessBtn">Check Answer</button>
+        
         <h1 id="song"></h1>
     </div>
     <!-- <button type="button" id="newSong" onclick="playSong()">New Song</button> -->
